@@ -119,6 +119,10 @@ input {
   h1 {
     font-size: 22px;
   }
+  
+  .home-link {
+    display: none;
+  }
 
   .print-title {
     display: block;
