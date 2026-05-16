@@ -1,19 +1,15 @@
+.answers {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 2px solid #333;
+}
+
 body {
   font-family: Arial, sans-serif;
   max-width: 900px;
   margin: 30px auto;
   padding: 20px;
   background: #f6f7fb;
-}
-
-.controls {
-  margin-bottom: 15px;
-}
-
-input {
-  padding: 6px;
-  width: 80px;
-  font-size: 14px;
 }
 
 button {
@@ -30,16 +26,41 @@ button:hover {
   background: #1f56b8;
 }
 
-.worksheet {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+.controls {
+  margin-bottom: 15px;
+}
+
+.eq-indent {
+  margin-left: 25px; /* aligns with equation start */
+}
+
+input {
+  padding: 6px;
+  width: 80px;
+  font-size: 14px;
+}
+
+.home-link a {
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+.home-link a:visited,
+.home-link a:hover,
+.home-link a:active {
+  color: black;
+  text-decoration: none;
 }
 
 .problem {
   margin-bottom: 28px;
   font-family: "STIX Two Math", "Times New Roman", serif;
+}
+
+.num {
+  min-width: 20px;
 }
 
 .problem-line {
@@ -48,18 +69,8 @@ button:hover {
   align-items: flex-start;
 }
 
-.num {
-  min-width: 20px;
-}
-
-.eq-indent {
-  margin-left: 25px; /* aligns with equation start */
-}
-
-.answers {
-  margin-top: 20px;
-  padding-top: 10px;
-  border-top: 2px solid #333;
+.print-title {
+  display: none;
 }
 
 .sol {
@@ -67,8 +78,11 @@ button:hover {
   font-family: "STIX Two Math", "Times New Roman", serif;
 }
 
-.print-title {
-  display: none;
+.worksheet {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 /* PRINT / PDF MODE */
@@ -80,10 +94,6 @@ button:hover {
 
   @page :first {
     margin-top: 8mm;
-  }
-
-  h1 {
-    font-size: 22px;
   }
 
   .answers {
@@ -105,9 +115,9 @@ button:hover {
   button {
     display: none;
   }
-  
-  .screen-title {
-    display: none;
+
+  h1 {
+    font-size: 22px;
   }
 
   .print-title {
@@ -116,21 +126,25 @@ button:hover {
     margin-bottom: 20px;
   }
 
-  .worksheet {
-    box-shadow: none;
-  }
-
   .problem {
     page-break-inside: avoid;
     break-inside: avoid;
   }
 
+  .screen-only {
+    display: none;
+  }
+  
+  .screen-title {
+    display: none;
+  }
+  
   .space {
     height: 70px;
     margin-top: 8px;
   }
-
-  .screen-only {
-    display: none;
+  
+  .worksheet {
+    box-shadow: none;
   }
 }
