@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f6f7fb;
+}
+
+.controls {
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 6px;
+  width: 80px;
+  font-size: 14px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-left: 6px;
+  border: none;
+  background: #2d6cdf;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1f56b8;
+}
+
+.worksheet {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.problem {
+  margin-bottom: 28px;
+  font-family: "STIX Two Math", "Times New Roman", serif;
+}
+
+.problem-line {
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.num {
+  min-width: 20px;
+}
+
+.eq-indent {
+  margin-left: 25px; /* aligns with equation start */
+}
+
+.answers {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 2px solid #333;
+}
+
+.sol {
+  margin: 6px 0;
+  font-family: "STIX Two Math", "Times New Roman", serif;
+}
+
+.print-title {
+  display: none;
+}
+
+/* PRINT / PDF MODE */
+@media print {
+  @page {
+    size: portrait;
+    margin: 18mm;
+  }
+
+  @page :first {
+    margin-top: 8mm;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .answers {
+    border-top: none;
+    padding-top: 0;
+    page-break-before: always;
+    break-before: page;
+  }
+
+  body {
+    background: white;
+    margin: 0;
+  }
+
+  .controls {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+  
+  .screen-title {
+    display: none;
+  }
+
+  .print-title {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .worksheet {
+    box-shadow: none;
+  }
+
+  .problem {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .space {
+    height: 70px;
+    margin-top: 8px;
+  }
+
+  .screen-only {
+    display: none;
+  }
+}

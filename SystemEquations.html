@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>System of Equations Worksheet Generator | The AVS Site</title>
+    <link rel="icon" type="image/x-icon" href="/Data/Images/Icons/AVS.jpeg">
+    <link href="Stylesheets/SystemEquations.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <p><a href="./" style="text-decoration: none">Worksheet Generators</a></p>
+    <h1 class="screen-title">System of Equations Worksheet Generator</h1>
+    <h1 class="print-title">System of Equations Worksheet</h1>
+    <div class="controls">
+        Number of systems:
+        <input id="count" type="number" min="1" max="50" value="10">
+        <button onclick="generateWorksheet()">Generate</button>
+        <button onclick="window.print()">Download PDF</button>
+    </div>
+    <div id="output" class="worksheet"></div>
+    <script src="Scripts/SystemEquations.js"></script>
+  </body>
+</html>
